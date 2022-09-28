@@ -1,5 +1,3 @@
-"use strict";
-
 var display = document.getElementById('display')
 var minutos = document.getElementById('minutos')
 var segundos = document.getElementById('segundos')
@@ -7,16 +5,16 @@ var comecar = document.getElementById('comecar')
 var pausar = document.getElementById('pausar')
 var cancelar = document.getElementById('cancelar')
 
-var minutoAtual;
-var segundoAtual;
+var minutoAtual
+var segundoAtual
 var interval
 
 for(var i = 0; i <= 60; i++){
-    minutos.innerHTML += '<option value = '+i+'>' +i+'</option>';
+    minutos.innerHTML += '<option value = '+i+'>' +i+'</option>'
 }
 
 for(var i = 0; i <= 60; i++){
-    segundos.innerHTML += '<option value = '+i+'>' +i+ '</option>';
+    segundos.innerHTML += '<option value = '+i+'>' +i+ '</option>'
 }
 
 comecar.addEventListener('click', function(){
@@ -24,7 +22,7 @@ comecar.addEventListener('click', function(){
     segundoAtual = segundos.value
     display.childNodes[1].innerHTML = minutoAtual+" : "+segundoAtual
     interval = setInterval(function(){
-        segundoAtual--;
+        segundoAtual--
 
         if(segundoAtual <= 0){
             if(minutoAtual > 0){
@@ -49,5 +47,5 @@ pausar.addEventListener('click', function(){
 
 cancelar.addEventListener('click', function(){
     clearInterval(interval);
-    display.childNodes[1].innerHTML = "00 : 00";
+    display.childNodes[1].innerHTML = "00 : 00"
 })
