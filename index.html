@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer | Teste para estágio</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Teste para estágio Esferas Software</h1>
+    </header>
+
+    <audio id="som" src="midia/alarm.mp3"></audio>
+
+    <main class="container">
+        <div class="contagem">
+            
+            <h3>Minutos:</h3>
+            <select name="minutos" id="minutos"></select>
+
+            <h3>Segundos:</h3>
+            <select name="segundos" id="segundos"></select>
+        </div>
+        
+        <div id="display">
+            <h3>00 : 00</h3>
+        </div>
+
+        <div class="botao">
+            <button class="botoes" id="comecar" accesskey="i">Começar</button>
+            <button class="botoes" id="pausar" style="display: none;" accesskey="p">Pausar</button>
+            <button class="botoes" id="cancelar" accesskey="c">Cancelar</button>
+        </div>
+    </main>
+
+    <p class="obs">Obs: Para iniciar o timer poderá utilizar a tecla alt + i, para pausar alt + p e para cancelar alt + c.</p>
+
+    <footer class="rodape">
+        Projeto criado por Marcel Moura da Luz Melo
+    </footer>
+
+    <script src="timer.js"></script>
+</body>
+</html>

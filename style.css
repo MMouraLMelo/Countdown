@@ -1,0 +1,83 @@
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cabecalho{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+
+.container{
+    text-align: center;
+}
+
+.contagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    margin-top: -20px;
+}
+
+select{
+    width: 50px;
+    border-radius: 5px;
+    margin: 0 1rem;
+    padding: .3rem 0;
+    text-align: center;
+}
+
+#display{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.botoes{
+    width: 20%;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.botoes:hover{
+    background-color: darkorange;
+    transform: scale(1.2);
+}
+
+.obs{
+    font-size: 0.6rem;
+    text-align: right;
+    margin-top: 4rem;
+    text-decoration: underline;
+}
+
+.rodape{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 1rem 0;
+    margin-top: 10rem;
+}
+
