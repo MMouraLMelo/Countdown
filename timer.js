@@ -5,8 +5,8 @@ var comecar = document.getElementById('comecar')
 var pausar = document.getElementById('pausar')
 var cancelar = document.getElementById('cancelar')
 
-var minutoAtual
-var segundoAtual
+var minutoAtual 
+var segundoAtual 
 var interval
 
 for(var i = 0; i <= 60; i++){
@@ -20,7 +20,7 @@ for(var i = 0; i <= 60; i++){
 comecar.addEventListener('click', function(){
     minutoAtual = minutos.value
     segundoAtual = segundos.value
-    display.childNodes[1].innerHTML = minutoAtual+" : "+segundoAtual
+    display.innerHTML = minutoAtual+" : "+segundoAtual
     interval = setInterval(function(){
         segundoAtual--
 
@@ -33,7 +33,7 @@ comecar.addEventListener('click', function(){
                 clearInterval(interval)
             }
         }
-        display.childNodes[1].innerHTML = minutoAtual+" : "+segundoAtual
+        display.innerHTML = minutoAtual+" : "+segundoAtual
         document.getElementById('comecar').style.display = 'none'
         document.getElementById('pausar').style.display = 'inline'
     }, 1000)
@@ -47,5 +47,5 @@ pausar.addEventListener('click', function(){
 
 cancelar.addEventListener('click', function(){
     clearInterval(interval);
-    display.childNodes[1].innerHTML = "00 : 00"
+    display.innerHTML = "00 : 00"
 })
