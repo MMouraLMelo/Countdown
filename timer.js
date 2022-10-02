@@ -9,18 +9,21 @@ var minutoAtual
 var segundoAtual 
 var interval
 
-for(var i = 0; i <= 60; i++){
-    minutos.innerHTML += '<option value = '+i+'>' +i+'</option>'
+
+for(var m = 0; m <= 60; m++){
+    minutos.innerHTML += '<option value = '+m+'>' +m+'</option>'
 }
 
-for(var i = 0; i <= 60; i++){
-    segundos.innerHTML += '<option value = '+i+'>' +i+ '</option>'
+for(var s = 0; s <= 60; s++){
+    segundos.innerHTML += '<option value = '+s+'>' +s+ '</option>'
 }
+
 
 comecar.addEventListener('click', function(){
+    
     minutoAtual = minutos.value
     segundoAtual = segundos.value
-    display.innerHTML = minutoAtual+" : "+segundoAtual
+    display.innerHTML = (minutoAtual < 10 ? '0' + minutoAtual : minutoAtual) + ':' + (segundoAtual < 10 ? '0' + segundoAtual : segundoAtual)
     interval = setInterval(function(){
         segundoAtual--
 
@@ -33,19 +36,26 @@ comecar.addEventListener('click', function(){
                 clearInterval(interval)
             }
         }
-        display.innerHTML = minutoAtual+" : "+segundoAtual
+        display.innerHTML = (minutoAtual < 10 ? '0' + minutoAtual : minutoAtual) + ':' + (segundoAtual < 10 ? '0' + segundoAtual : segundoAtual)
         document.getElementById('comecar').style.display = 'none'
         document.getElementById('pausar').style.display = 'inline'
     }, 1000)
 })
 
 pausar.addEventListener('click', function(){
+
     clearInterval(interval)
+    
+
     document.getElementById('comecar').style.display = 'inline'
     document.getElementById('pausar').style.display = 'none'
 })
 
 cancelar.addEventListener('click', function(){
-    clearInterval(interval);
-    display.innerHTML = "00 : 00"
+    clearInterval(interval)
+    display.innerHTML = "00:00"
 })
+
+
+
+

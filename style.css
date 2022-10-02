@@ -37,6 +37,8 @@ select{
 #display{
     font-size: 1.5rem;
     padding: 1rem 0;
+    margin-top: 2rem;
+    font-weight: bold;
 }
 
 
@@ -45,6 +47,7 @@ select{
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+    
 }
 
 .botoes{
